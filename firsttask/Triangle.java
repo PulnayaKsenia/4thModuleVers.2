@@ -2,21 +2,47 @@ package com.goit.fourthmodule.firsttask;
 
 import java.util.Scanner;
 
-public class Triangle {
+class Triangle extends GeometricFigure {
+
     public double base;
     public double height;
-    public double coefficient = 0.5;
 
-    public double squareTriangle() {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter value base of a triangle: ");
-        double base = scanner.nextDouble();
+    public double getBase() {
 
-        System.out.println("Enter value height of a triangle: ");
-        double height = scanner.nextDouble();
-
-        double sTriangle = coefficient * base * height;
-        return sTriangle;
+        return base;
     }
+
+    public void setBase(double base) {
+
+        this.base = base;
+    }
+
+
+    public double getHeight() {
+
+        return height;
+    }
+
+    public void setHeight(double height) {
+
+        this.height = height;
+    }
+
+    @Override
+    public String getFigureType() {
+        return this.getClass().toString();
+    }
+
+    @Override
+    public String getInitialParams() {
+        return "enter base and height of triangle: ";
+    }
+
+    @Override
+    public double calculate() {
+        return 0.5*height*base;
+    }
+
 }
+

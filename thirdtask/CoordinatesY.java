@@ -2,21 +2,39 @@ package com.goit.fourthmodule.thirdtask;
 
 import java.util.Scanner;
 
-public class CoordinatesY {
+class CoordinatesY extends Point{
     public double y1;
     public double y2;
 
-    public double coordinatesY() {
-        Scanner scannery1 = new Scanner(System.in);
-        System.out.println("Enter value of point with coordinate y1: ");
-        double y1 = scannery1.nextDouble();
+    public double getY1() {
+        return y1;
+    }
 
-        Scanner scannery2 = new Scanner(System.in);
-        System.out.println("Enter value of point with coordinate y2: ");
-        double y2 = scannery2.nextDouble();
+    public void setY1(double y1) {
+        this.y1 = y1;
+    }
 
-        double y = y2 - y1;
-        return y;
+    public double getY2() {
+        return y2;
+    }
+
+    public void setY2(double y2) {
+        this.y2 = y2;
+    }
+
+    @Override
+    public String getPoint() {
+        return this.getClass().toString();
+    }
+
+    @Override
+    public String getCoordinates() {
+        return "enter coordinates y1 and y2: ";
+    }
+
+    @Override
+    public double calculate() {
+        return y2 - y1;
     }
 
 }

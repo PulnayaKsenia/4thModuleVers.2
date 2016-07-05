@@ -1,15 +1,15 @@
 package com.goit.fourthmodule.secondtask;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        Util temperature = new Util();
+        Converter converter = temperature.readConsole();
 
-        CelsiusFarenheit cf = new CelsiusFarenheit();
-        System.out.println("Conversion temperature from Celsius to Fahrenheit: "+cf.celsiusFarenheit());
-
-
-        FarenheitCelsius fc = new FarenheitCelsius();
-        System.out.println("Conversion temperature from Fahrenheit to Celsius: "+fc.fahrenheitCelsius());
+        double calculate = converter.calculate();
+        System.out.println(calculate);
     }
 }
+

@@ -2,22 +2,45 @@ package com.goit.fourthmodule.firsttask;
 
 import java.util.Scanner;
 
-public class Rectangle {
+class Rectangle extends GeometricFigure {
+
     public double length;
     public double height;
 
-     public double squareRectangle() {
-         Scanner scanner = new Scanner(System.in);
+    public double getLength() {
 
-         System.out.println("Enter length of a rectangle: ");
-         double length = scanner.nextDouble();
-
-         System.out.println("Enter height of a rectangle: ");
-         double height = scanner.nextDouble();
-
-        double sRectangle = length*height;
-        return sRectangle;
-
-
+        return length;
     }
+
+    public void setLength(double length) {
+
+        this.length = length;
+    }
+
+    public double getHeight() {
+
+        return height;
+    }
+
+    public void setHeightR(double height) {
+
+        this.height = height;
+    }
+
+    @Override
+    public String getFigureType() {
+        return this.getClass().toString();
+    }
+
+    @Override
+    public String getInitialParams() {
+        return "enter length and height of rectangle: ";
+    }
+
+    @Override
+    public double calculate() {
+        return length * height;
+    }
+
 }
+

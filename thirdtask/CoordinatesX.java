@@ -2,20 +2,40 @@ package com.goit.fourthmodule.thirdtask;
 
 import java.util.Scanner;
 
-public class CoordinatesX {
+class CoordinatesX extends Point {
     public double x1;
     public double x2;
 
-    public double coordinatesX() {
-        Scanner scannerx1 = new Scanner(System.in);
-        System.out.println("Enter value of point with coordinate x1: ");
-        double x1 = scannerx1.nextDouble();
-
-        Scanner scannerx2 = new Scanner(System.in);
-        System.out.println("Enter value of point with coordinate x2: ");
-        double x2 = scannerx1.nextDouble();
-
-        double x = x2 - x1;
-        return x;
+    public double getX1() {
+        return x1;
     }
+
+    public void setX1(double x1) {
+        this.x1 = x1;
+    }
+
+    public double getX2() {
+        return x2;
+    }
+
+    public void setX2(double x2) {
+        this.x2 = x2;
+    }
+
+    @Override
+    public String getPoint() {
+        return this.getClass().toString();
+    }
+
+    @Override
+    public String getCoordinates() {
+        return "enter coordinates x1 and x2: ";
+    }
+
+    @Override
+    public double calculate() {
+        return x2 - x1;
+    }
+
+
 }

@@ -1,14 +1,14 @@
 package com.goit.fourthmodule.thirdtask;
 
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        CoordinatesX x = new CoordinatesX();
-        System.out.println("The distance between two points x: "+x.coordinatesX());
+        Util pointXY = new Util();
+        Point xy = pointXY.readConsole();
 
-        CoordinatesY y = new CoordinatesY();
-        System.out.println("The distance between two points y: "+y.coordinatesY());
-
+        double calculate = xy.calculate();
+        System.out.println(calculate);
     }
-
 }
