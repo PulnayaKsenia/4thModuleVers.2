@@ -4,12 +4,6 @@ class Circle extends GeometricFigure {
 
     private double radius;
 
-
-    public double squareCircle() {
-
-        return Math.PI * radius * radius;
-    }
-
     public double getRadius() {
 
         return radius;
@@ -20,20 +14,21 @@ class Circle extends GeometricFigure {
         this.radius = radius;
     }
 
-
     @Override
     public String getFigureType() {
 
-        return this.getClass().toString();
+        return "Circle";
     }
 
     @Override
     public String getInitialParams() {
-        return "enter radius of square: ";
+
+        return "radius of square: ";
     }
 
     @Override
     public double calculate() {
+
         return Math.PI * radius * radius;
     }
 

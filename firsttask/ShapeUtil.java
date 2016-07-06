@@ -6,29 +6,38 @@ import java.io.InputStreamReader;
 
 public class ShapeUtil {
 
-    public static final BufferedReader BUFFERED_READER = new BufferedReader(new InputStreamReader(System.in));
+    public static final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
+
+    enum Figures {Circle, Rectangle, Triangle, Out}
 
     public GeometricFigure readConsole() throws IOException {
+
         System.out.println("If you need to calculate the square of geometric figures,\n " +
                 "please, choose type of geometric figure: Circle, Triangle, Rectangle or enter Out for exit: ");
+        String figure = READER.readLine();
 
-        String figure = BUFFERED_READER.readLine();
+        Figures figures;
+
+        figures = Figures.Circle;
+
         String[] split;
-        switch (figure) {
-            case "Circle":
+        switch (figures) {
+            case Circle:
                 Circle circle = new Circle();
                 split = readParams(circle);
                 try {
                     circle.setRadius(Double.parseDouble(split[0]));
                 } catch (NumberFormatException ex) {
-
-                    //не пойму, какой метод вызывать, чтобы программа не выбрасывала 0.0,
-                    // а заново запрашивала ввести данные
                     System.out.println("You enter string value, must be number!");
 
-                } return circle;
+                    if (circle == null) {
+                        break;
+                    }
+                }
+                System.out.println(circle);
+                return circle;
 
-            case "Triangle":
+            case Triangle:
                 Triangle triangle = new Triangle();
                 split = readParams(triangle);
                 try {
@@ -40,7 +49,7 @@ public class ShapeUtil {
                 }
                 return triangle;
 
-            case "Rectangle":
+            case Rectangle:
                 Rectangle rectangle = new Rectangle();
                 split = readParams(rectangle);
                 try {
@@ -51,7 +60,7 @@ public class ShapeUtil {
                 }
                 return rectangle;
 
-            case "Out":
+            case Out:
                 System.exit(1);
             default:
                 readConsole();
@@ -61,7 +70,7 @@ public class ShapeUtil {
 
     private String[] readParams(GeometricFigure figure) throws IOException {
         System.out.println(figure);
-        String inputForGeometricFigure = BUFFERED_READER.readLine();
+        String inputForGeometricFigure = READER.readLine();
 
         return inputForGeometricFigure.split(",");
     }

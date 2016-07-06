@@ -24,7 +24,7 @@ class CoordinatesY extends Point{
 
     @Override
     public String getPoint() {
-        return this.getClass().toString();
+        return "CoordinatesY";
     }
 
     @Override

@@ -10,7 +10,7 @@ abstract class Converter {
 
     @Override
     public String toString() {
-        return "Please, enter initial params for " + getConverterType() + ", with next params: "
+        return "Please, enter initial params for " + getConverterType() + " with next params: "
                 + getScale();
     }
 }

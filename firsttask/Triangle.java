@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 class Triangle extends GeometricFigure {
 
-    public double base;
-    public double height;
-
+    private double base;
+    private double height;
 
     public double getBase() {
 
@@ -17,7 +16,6 @@ class Triangle extends GeometricFigure {
 
         this.base = base;
     }
-
 
     public double getHeight() {
 
@@ -31,16 +29,18 @@ class Triangle extends GeometricFigure {
 
     @Override
     public String getFigureType() {
-        return this.getClass().toString();
+        return "Triangle";
     }
 
     @Override
     public String getInitialParams() {
-        return "enter base and height of triangle: ";
+
+        return "base and height of triangle: ";
     }
 
     @Override
     public double calculate() {
+
         return 0.5*height*base;
     }
 

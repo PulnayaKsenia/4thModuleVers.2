@@ -16,8 +16,7 @@ class FahrenheitCelsius extends Converter {
 
     @Override
     public String getConverterType() {
-        return this.getClass().toString();
-
+        return "fahrenheit";
     }
 
     @Override

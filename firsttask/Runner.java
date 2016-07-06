@@ -11,5 +11,6 @@ public class Runner {
         double calculate = figure.calculate();
         System.out.println(calculate);
 
+
     }
 }

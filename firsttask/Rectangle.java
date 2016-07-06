@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 class Rectangle extends GeometricFigure {
 
-    public double length;
-    public double height;
+    private double length;
+    private double height;
 
     public double getLength() {
 
@@ -29,12 +29,12 @@ class Rectangle extends GeometricFigure {
 
     @Override
     public String getFigureType() {
-        return this.getClass().toString();
+        return "Rectangle";
     }
 
     @Override
     public String getInitialParams() {
-        return "enter length and height of rectangle: ";
+        return "length and height of rectangle: ";
     }
 
     @Override

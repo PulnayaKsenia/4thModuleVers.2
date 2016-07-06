@@ -5,13 +5,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Util {
-    public static final BufferedReader BUFFERED_READER = new BufferedReader(new InputStreamReader(System.in));
+    public static final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
 
     public Point readConsole() throws IOException {
         System.out.println("If you need to count coordinate between point x and y,\n" +
                 "please, enter PointX or PointY or Out for exit: ");
 
-        String xy = BUFFERED_READER.readLine();
+        String xy = READER.readLine();
         String[] split;
         switch (xy) {
             case "PointX":
@@ -50,7 +50,7 @@ public class Util {
 
     private String[] readParams(Point point) throws IOException {
         System.out.println(point);
-        String inputForPoint = BUFFERED_READER.readLine();
+        String inputForPoint = READER.readLine();
 
         return inputForPoint.split(",");
 

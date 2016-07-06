@@ -10,7 +10,7 @@ abstract class GeometricFigure {
 
     @Override
     public String toString() {
-        return "Please, enter initial params (coma is delimiter) for " + getFigureType() + ", with next params: "
+        return "Please, enter initial params (coma is delimiter) for " + getFigureType() + " with next params: "
                 + getInitialParams();
     }
 }

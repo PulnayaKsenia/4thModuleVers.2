@@ -11,7 +11,7 @@ abstract class Point {
     @Override
     public String toString() {
 
-        return "Please, enter initial params (coma is delimiter) for " + getPoint() + ", with next coordinates: " +
+        return "Please, enter initial params (coma is delimiter) for " + getPoint() + " with next coordinates: " +
                 getCoordinates();
     }
 }
